@@ -1,0 +1,13 @@
+<div>
+  <h1><strong>Restaurants</strong></h1>
+  <ol>
+    <%  @restaurants.each do |restaurant| %>
+      <li>
+        <%= restaurant.name %>
+        <%= link_to "See more", restaurant_path(restaurant), class: "btn btn-primary btn-sm" %>
+        <!-- <%= link_to "Edit", edit_restaurant_path(restaurant), class: "text-muted ms-2" %> -->
+      </li>
+    <% end %>
+  </ol>
+</div>
+<%= link_to "Add Restaurant", new_restaurant_path, class: "btn btn-primary" %>
